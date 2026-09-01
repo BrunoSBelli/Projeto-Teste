@@ -1,0 +1,199 @@
+body {
+  background: #ccc; /* fundo cinza pra destacar a "folha" */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 20px;
+  font-family: "Calibri", Arial, sans-serif;
+  font-size: 10pt;
+  margin: 0;
+  line-height: 1.4;
+}
+.logo {
+  width: 200px;
+  display: block;
+  margin: 0 0 10px 0;
+}
+
+.page {
+  background: white;
+  width: 210mm;
+  min-height: 297mm; /* altura mínima, não fixa */
+  padding: 20mm;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.titulo {
+  font-weight: bold;
+  text-align: center;
+  font-size: 16pt;
+}
+.emissao {
+  text-align: center;
+  font-size: 12pt;
+}
+
+.section {
+  margin-top: 20px;
+  text-align: justify;
+}
+.section2 {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.data {
+  text-align: right;
+  font-size: 10pt;
+  margin-top: 20px;
+}
+
+.observacao {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.assinaturas {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40mm;
+}
+
+.assinatura {
+  text-align: center;
+  width: 60mm; /* largura fixa do bloco da assinatura */
+  font-weight: bold;
+}
+
+.linha {
+  border-top: 1px solid black;
+  width: 100%; /* largura fixa definida pelo pai (.assinatura) */
+  height: 1px; /* espaço para “assinar” acima do texto */
+  margin-bottom: 5px;
+}
+
+table {
+  width: 100%;
+  align-self: center;
+  border-collapse: collapse;
+  margin-top: 10px 0;
+  table-layout: auto;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+  padding: 1px 3px; /* quase sem espaço interno */ /* letras menores */
+  line-height: 0.8; /* altura da linha mais apertada */
+  white-space: nowrap;
+}
+th,
+td {
+  padding: 6px;
+  text-align: left;
+  font-size: 10pt;
+}
+
+#centro {
+  text-align: center;
+}
+
+.btn-imprimir {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #d9534f; /* vermelho tipo btn-danger */
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 9999; /* garante que fica acima do conteúdo */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+}
+
+.btn-imprimir:hover {
+  background-color: #c9302c;
+}
+
+.btn-compartilhar {
+  position: fixed;
+  bottom: 70px; /* logo abaixo do botão de imprimir */
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+}
+
+.btn-compartilhar:hover {
+  background-color: #0056b3;
+}
+
+
+
+@media (max-width: 768px) {
+  .btn-imprimir {
+    top: 15px;
+    right: 15px;
+    font-size: 16px; /* letras um pouco maiores */
+    padding: 14px 20px; /* área de toque maior */
+    border-radius: 12px;
+  }
+  .btn-compartilhar {
+    font-size: 16px;
+    padding: 14px 20px;
+  }
+}
+
+/* 🔹 Ajuste extra para telas muito pequenas (ex: iPhone SE) */
+@media (max-width: 480px) {
+  .btn-imprimir {
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    padding: 16px 22px;
+  }
+}
+
+@media print {
+  @page {
+    margin: 0; /* remove margens automáticas da impressora/navegador */
+  }
+
+  body {
+    background: none; /* tira fundo cinza da tela */
+    padding: 0; /* remove espaço externo */
+  }
+
+  .page {
+    margin: 0 auto; /* centraliza no meio */
+    box-shadow: none; /* sem sombra no PDF */
+    page-break-after: always; /* força quebra certinha */
+  }
+
+  .logo {
+    display: block;
+    margin: 0 0 10px 0; 
+  }
+  .btn-imprimir {
+    display: none;
+  }
+  .btn-compartilhar {
+    display: none;
+  }
+}
+
+

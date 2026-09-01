@@ -1,0 +1,19 @@
+# Dependências
+/node_modules
+
+# Variáveis de ambiente / segredos
+.env
+
+# PDFs gerados pelo sistema (contêm dados reais de clientes/contratos)
+/assets/ContratoPDF_save/*
+!/assets/ContratoPDF_save/.gitkeep
+/assets/PropostaPDF_save/*
+!/assets/PropostaPDF_save/.gitkeep
+
+# JSONs temporários usados na geração dos PDFs
+/assets/Temp/*
+!/assets/Temp/.gitkeep
+
+# Arquivos de SO/editor
+.DS_Store
+Thumbs.db
