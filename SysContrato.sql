@@ -1,5 +1,5 @@
 CREATE DATABASE SistemaLocacaoDB;
-USE FrezenDB;
+USE SistemaLocacaoDB;
 
 
 DROP TABLE IF EXISTS `cliente`;
