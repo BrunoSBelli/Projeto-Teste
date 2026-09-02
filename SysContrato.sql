@@ -1,4 +1,4 @@
-CREATE DATABASE FrezenDB;
+CREATE DATABASE SistemaLocacaoDB;
 USE FrezenDB;
 
 
