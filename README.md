@@ -4,6 +4,8 @@ Sistema web para gestão do processo de locação de máquinas (empilhadeiras e 
 
 O sistema cobre todo o fluxo comercial: cadastro de clientes, funcionários e máquinas, geração de propostas comerciais, conversão de proposta em contrato, e emissão automática de PDFs dos documentos.
 
+> **Status:** projeto em produção, atualmente em uso por uma empresa real do ramo de locação de máquinas, com contratos ativos gerados pelo sistema. Segue em desenvolvimento contínuo junto com a empresa, com novas funcionalidades e ajustes sendo implementados conforme a necessidade do negócio.
+
 > **Nota:** por se tratar de um projeto usado em produção por uma empresa real, dados sensíveis (credenciais, CNPJ, CPF, contratos gerados) foram removidos ou substituídos por informações fictícias neste repositório público.
 
 ## Funcionalidades
